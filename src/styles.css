@@ -2053,6 +2053,29 @@ footer {
     margin-top: 14px;
 }
 
+.hero-credentials .school-description {
+    margin: 0 0 10px;
+    color: #343129;
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.hero-credentials .school-ranking {
+    margin: 0 0 10px;
+    padding: 8px 0;
+    border-block: 1px solid rgba(25, 23, 17, .2);
+    color: #7f1f19;
+    font: 500 9px/1.5 var(--technical);
+}
+
+.hero-credentials .school-ranking b {
+    font-size: 12px;
+}
+
+.hero-credentials .school-ranking span {
+    color: #3f3b32;
+}
+
 @media(max-width:900px) {
     .hero-credentials {
         margin-top: 34px;
