@@ -106,7 +106,7 @@ export default function Home() {
           </div>
           <div className="university-rankings" aria-label="ShanghaiTech University rankings">
             <div><b>#47</b><span>2026 Best Chinese Universities</span></div>
-            <div><b>#301–400</b><span>2025 ARWU World Ranking</span></div>
+            <div><b>#151–200</b><span>2025 GRAS · Artificial Intelligence</span></div>
           </div>
         </section>
 
