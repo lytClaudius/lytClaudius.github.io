@@ -97,9 +97,12 @@ export default function Home() {
 
         <section className="university-note reveal">
           <div>
-            <p className="section-kicker">ABOUT SHANGHAITECH</p>
-            <h2>Built around research<br />and innovation.</h2>
-            <p>ShanghaiTech is an emerging research-oriented university in Shanghai, jointly founded by the Shanghai Municipal People&apos;s Government and the Chinese Academy of Sciences.</p>
+            <p className="section-kicker">THE UNIVERSITY</p>
+            <h2>About ShanghaiTech</h2>
+            <h3>Built around research and innovation.</h3>
+            <p>Founded in 2013 by the Shanghai Municipal People&apos;s Government and the Chinese Academy of Sciences, ShanghaiTech is a young, research-oriented university located in Shanghai&apos;s Zhangjiang Hi-Tech Park.</p>
+            <p>With a small-scale, high-standard model, the university brings education, research, and innovation together across fields including artificial intelligence, biomedical engineering, life sciences, materials, and energy.</p>
+            <a className="university-link" href="https://www.shanghaitech.edu.cn/en/" target="_blank" rel="noreferrer">Visit ShanghaiTech <span>↗</span></a>
           </div>
           <div className="university-rankings" aria-label="ShanghaiTech University rankings">
             <div><b>#47</b><span>2026 Best Chinese Universities</span></div>
