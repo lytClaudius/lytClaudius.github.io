@@ -68,7 +68,7 @@ export default function Home() {
             <p className="hero-intro">I&apos;m <strong>Yuetong Li</strong>, a Computer Science undergraduate at ShanghaiTech University exploring active perception, dexterous manipulation, and embodied decision-making.</p>
             <div className="hero-credentials credentials reveal">
               <div><p className="section-kicker">EDUCATION</p><h3>ShanghaiTech University</h3><p>B.Eng. in Computer Science &amp; Technology<br />2023 — 2027 (expected)</p></div>
-              <div><p className="section-kicker">SELECTED HONORS</p><ul><li><b>2025</b> Merit Student</li><li><b>2025</b> 2nd Prize, National Electronics Design Contest · Shanghai</li><li><b>2025</b> 1st Prize, ShanghaiTech Electronics Design Contest</li></ul></div>
+              <div><p className="section-kicker">SELECTED HONORS</p><ul><li><b>2025</b> Merit Student</li><li><b>2024</b> Merit Student</li><li><b>2025</b> 2nd Prize, National Electronics Design Contest · Shanghai</li><li><b>2025</b> 1st Prize, ShanghaiTech Electronics Design Contest</li></ul></div>
               <div><p className="section-kicker">TOOLBOX</p><div className="chips"><span>Python</span><span>C / C++</span><span>PyTorch</span><span>OpenGL</span><span>MATLAB</span><span>Robotics</span></div></div>
             </div>
             <div className="hero-actions">
