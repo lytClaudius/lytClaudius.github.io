@@ -2021,3 +2021,46 @@ footer {
     .hero-intro { font-size: 16px }
     .feature-copy { padding: 22px }
 }
+
+/* Compact credentials block moved into the hero introduction. */
+.hero-credentials {
+    margin: 38px 0 0;
+    max-width: 760px;
+    grid-template-columns: 1fr 1.35fr 1fr;
+    box-shadow: none;
+}
+
+.hero-credentials > div {
+    padding: 20px 22px;
+}
+
+.hero-credentials h3 {
+    margin: 14px 0 5px;
+}
+
+.hero-credentials p,
+.hero-credentials li {
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.hero-credentials ul {
+    margin: 0;
+    padding-top: 8px;
+}
+
+.hero-credentials .chips {
+    margin-top: 14px;
+}
+
+@media(max-width:900px) {
+    .hero-credentials {
+        margin-top: 34px;
+    }
+}
+
+@media(max-width:520px) {
+    .hero-credentials {
+        margin-top: 30px;
+    }
+}
