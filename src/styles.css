@@ -1428,7 +1428,7 @@ nav a.active::after {
 }
 
 .hero::before {
-    content: "ARCHIVE  /  NO. 1999—YL";
+    content: "SHANGHAITECH  ·  COMPUTER SCIENCE  ·  2023—2027";
     position: absolute;
     left: 44px;
     top: 28px;
@@ -1823,6 +1823,27 @@ nav a.active::after {
     border-bottom: 3px double var(--accent)
 }
 
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.contact-links a {
+    display: inline-flex;
+    gap: 60px;
+    color: var(--accent);
+    border-bottom: 3px double var(--accent);
+    padding-bottom: 8px;
+}
+
+.contact-links a:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+}
+
 footer {
     border-top: 1px solid rgba(42,37,27,.32);
     padding-top: 26px
@@ -2160,5 +2181,10 @@ footer {
     .university-rankings div {
         min-height: 125px;
         padding: 18px;
+    }
+
+    .contact-links a {
+        gap: 15px;
+        font-size: 13px;
     }
 }

@@ -139,7 +139,7 @@ export default function Home() {
           </details>
         </section>
 
-        <section className="contact reveal" id="contact"><p className="section-kicker">LET&apos;S CONNECT / 04</p><h2>Interested in building<br />robots that <em>keep learning?</em></h2><p>I&apos;m seeking PhD opportunities starting in 2027 in robotics, embodied intelligence, and robot learning.</p><a href="mailto:liyt2023@shanghaitech.edu.cn">liyt2023@shanghaitech.edu.cn <span>↗</span></a></section>
+        <section className="contact reveal" id="contact"><p className="section-kicker">LET&apos;S CONNECT / 04</p><h2>Interested in building<br />robots that <em>keep learning?</em></h2><p>I&apos;m seeking PhD opportunities starting in 2027 in robotics, embodied intelligence, and robot learning.</p><div className="contact-links"><a href="mailto:liyt2023@shanghaitech.edu.cn">liyt2023@shanghaitech.edu.cn <span>↗</span></a><a href="mailto:yuetongli2004@gmail.com">yuetongli2004@gmail.com <span>↗</span></a><a href="tel:+8613963982972">+86 139 6398 2972 <span>↗</span></a></div></section>
       </main>
 
       <footer><span>Yuetong Li · 2026</span><span>Shanghai ↔ Anywhere</span><a href="#home">Back to top ↑</a></footer>
