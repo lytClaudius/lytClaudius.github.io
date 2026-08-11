@@ -104,7 +104,7 @@ export default function Home() {
             <h2>AURORA</h2>
             <h3>Active Uncertainty-Driven Re-Orientation for In-Hand Reconstruction</h3>
             <p>A closed-loop framework that lets a dexterous hand actively reveal under-observed object surfaces. Ray-GPIS translates geometric uncertainty into next-best-view targets, then maps them to feasible in-hand rotation actions.</p>
-            <div className="feature-links"><a className="primary-action" href="/AURORA_Paper.pdf" target="_blank">Read the paper <span>↗</span></a><a className="text-action" href="https://aurorahand.github.io/" target="_blank" rel="noreferrer">Project page <span>↗</span></a></div>
+            <div className="feature-links"><a className="primary-action" href="https://aurorahand.github.io/" target="_blank" rel="noreferrer">Project page <span>↗</span></a></div>
           </div>
         </section>
 
