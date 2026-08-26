@@ -18,17 +18,17 @@ const honors: Honor[] = [
 ];
 
 const projects: Project[] = [
-  { year: "2026", tag: "CS181 · PLANNING", title: "Multi-Agent Coordination in Overcooked", text: "Developed two complementary approaches to long-horizon coordination: Macro-Expectimax with Bayesian teammate-intent inference, and a neural Q-learning agent trained through parameter-shared self-play.", github: "https://github.com/lytClaudius/MultiAgentCollab_in_Overcooked", report: "/reports/overcooked-coordination-report.pdf" },
-  { year: "2025", tag: "COMPUTER GRAPHICS", title: "Real-Time Global Illumination", text: "Implemented Radiance Cascades in 2D and 3D, with SDF-guided probe tracing, hierarchical radiance merging, and interactive OpenGL rendering.", github: "https://github.com/lytClaudius/Real-time-Global-Illumination-via-Radiance-Cascades", report: "/reports/radiance-cascades-report.pdf" },
-  { year: "2024", tag: "PROBABILITY", title: "Performance Evaluation of Bandit Learning", text: "Implemented and compared Epsilon-Greedy, UCB, and Thompson Sampling, then explored approximate dynamic programming and preference-based methods under dependent and biased reward settings.", report: "/reports/bandit-learning-report.pdf" },
-  { year: "2024", tag: "MEDICAL IMAGING · PROJ 2", title: "Cardiac Cine MRI Segmentation", text: "Developed a PyTorch U-Net for multi-class cardiac MRI segmentation and evaluated skip connections, Dice and cross-entropy losses, data augmentation, and UNet++ variants.", report: "/reports/cardiac-mri-segmentation-report.pdf" },
+  { year: "2026", tag: "AI", title: "Multi-Agent Coordination in Overcooked", text: "Developed two complementary approaches to long-horizon coordination: Macro-Expectimax with Bayesian teammate-intent inference, and a neural Q-learning agent trained through parameter-shared self-play.", github: "https://github.com/lytClaudius/MultiAgentCollab_in_Overcooked", report: "/reports/overcooked-coordination-report.pdf" },
+  { year: "2025", tag: "Computer Graphics", title: "Real-Time Global Illumination", text: "Implemented Radiance Cascades in 2D and 3D, with SDF-guided probe tracing, hierarchical radiance merging, and interactive OpenGL rendering.", github: "https://github.com/lytClaudius/Real-time-Global-Illumination-via-Radiance-Cascades", report: "/reports/radiance-cascades-report.pdf" },
+  { year: "2024", tag: "Probability & Statistics", title: "Performance Evaluation of Bandit Learning", text: "Implemented and compared Epsilon-Greedy, UCB, and Thompson Sampling, then explored approximate dynamic programming and preference-based methods under dependent and biased reward settings.", report: "/reports/bandit-learning-report.pdf" },
+  { year: "2024", tag: "AI for Medical Imaging", title: "Cardiac Cine MRI Segmentation", text: "Developed a PyTorch U-Net for multi-class cardiac MRI segmentation and evaluated skip connections, Dice and cross-entropy losses, data augmentation, and UNet++ variants.", report: "/reports/cardiac-mri-segmentation-report.pdf" },
 ];
 
 const moreProjects: Project[] = [
-  { year: "2025", tag: "ROBOT VISION", title: "Unknown-Object Tracking & Reconstruction", text: "Built a closed-loop RGB-D system combining SAM2, BundleTrack, keyframe filtering, point-cloud alignment, and TSDF fusion for metric 3D reconstruction.", report: "/reports/unknown-object-reconstruction-report.pdf" },
-  { year: "2025", tag: "EMBEDDED SYSTEMS", title: "Motion-Sensing Gesture Mouse", text: "Designed a wearable mouse using STM32, MPU6050, flex sensors, complementary filtering, and the HID Mouse protocol for real-time cursor and gesture control.", report: "/reports/gesture-mouse-report.pdf" },
-  { year: "2025", tag: "INTERPRETABILITY", title: "ML-Patch", text: "Proposed a multi-layer hidden-state patching framework for identifying factual knowledge inside large language models and studied its behavior across model families.", report: "/reports/ml-patch-slides.pptx", reportLabel: "Slides" },
-  { year: "2023", tag: "EDGE AI", title: "Raspberry Pi Handwritten Digit Recognition", text: "Built an integrated camera, k-NN, OpenCV, and eight-segment display system with a controlled enclosure and lighting setup for reliable on-device recognition.", report: "/reports/handwritten-digit-recognition-report.pdf" },
+  { year: "2025", tag: "Mechatronics", title: "Unknown-Object Tracking & Reconstruction", text: "Built a closed-loop RGB-D system combining SAM2, BundleTrack, keyframe filtering, point-cloud alignment, and TSDF fusion for metric 3D reconstruction.", report: "/reports/unknown-object-reconstruction-report.pdf" },
+  { year: "2025", tag: "Mechatronics", title: "Motion-Sensing Gesture Mouse", text: "Designed a wearable mouse using STM32, MPU6050, flex sensors, complementary filtering, and the HID Mouse protocol for real-time cursor and gesture control.", report: "/reports/gesture-mouse-report.pdf" },
+  { year: "2025", tag: "Intro to Machine Learning", title: "ML-Patch", text: "Proposed a multi-layer hidden-state patching framework for identifying factual knowledge inside large language models and studied its behavior across model families.", report: "/reports/ml-patch-slides.pptx", reportLabel: "Slides" },
+  { year: "2023", tag: "Intro to Info Science & Tech", title: "Raspberry Pi Handwritten Digit Recognition", text: "Built an integrated camera, k-NN, OpenCV, and eight-segment display system with a controlled enclosure and lighting setup for reliable on-device recognition.", report: "/reports/handwritten-digit-recognition-report.pdf" },
 ];
 
 function ProjectCard({ project }: { project: Project }) {
@@ -73,6 +73,11 @@ export default function Home() {
             <p className="eyebrow"><span className="status-dot" /> OPEN TO PHD OPPORTUNITIES · 2027</p>
             <h1>I build robots that<br /><em>learn by interacting.</em></h1>
             <p className="hero-intro">I&apos;m <strong>Yuetong Li</strong>, a Computer Science undergraduate at ShanghaiTech University exploring active perception, dexterous manipulation, and embodied decision-making.</p>
+            <div className="hero-credentials credentials reveal">
+              <div><p className="section-kicker">EDUCATION</p><h3>ShanghaiTech University</h3><p>B.Eng. in Computer Science &amp; Technology<br />2023 — 2027 (expected)</p></div>
+              <div><p className="section-kicker">SELECTED HONORS</p><ul><li><b>2025</b> Merit Student</li><li><b>2024</b> Merit Student</li><li><b>2025</b> 2nd Prize, National Electronics Design Contest · Shanghai</li><li><b>2025</b> 1st Prize, ShanghaiTech Electronics Design Contest</li></ul></div>
+              <div><p className="section-kicker">TOOLBOX</p><div className="chips"><span>Python</span><span>C / C++</span><span>PyTorch</span><span>OpenGL</span><span>MATLAB</span><span>Robotics</span></div></div>
+            </div>
             <div className="hero-actions">
               <a className="primary-action" href="#research">Explore my research <span>↘</span></a>
               <a className="text-action" href="/Yuetong_Li_CV.pdf" target="_blank">View CV <span>↗</span></a>
@@ -97,8 +102,23 @@ export default function Home() {
           <a className="scroll-cue" href="#research"><span /> SCROLL TO DISCOVER</a>
         </section>
 
+        <section className="university-note reveal">
+          <div>
+            <p className="section-kicker">THE UNIVERSITY</p>
+            <h2>About ShanghaiTech</h2>
+            <h3>Built around research and innovation.</h3>
+            <p>Founded in 2013 by the Shanghai Municipal People&apos;s Government and the Chinese Academy of Sciences, ShanghaiTech is a young, research-oriented university located in Shanghai&apos;s Zhangjiang Hi-Tech Park.</p>
+            <p>With a small-scale, high-standard model, the university brings education, research, and innovation together across fields including artificial intelligence, biomedical engineering, life sciences, materials, and energy.</p>
+            <a className="university-link" href="https://www.shanghaitech.edu.cn/en/" target="_blank" rel="noreferrer">Visit ShanghaiTech <span>↗</span></a>
+          </div>
+          <div className="university-rankings" aria-label="ShanghaiTech University rankings">
+            <div><b>#47</b><span>2026 Best Chinese Universities</span></div>
+            <div><b>#151–200</b><span>2025 GRAS · Artificial Intelligence</span></div>
+          </div>
+        </section>
+
         <section className="interests" id="interests">
-          <div className="section-heading reveal"><div><p className="section-kicker">RESEARCH INTERESTS / 01</p><h2>Questions I want<br />to pursue.</h2></div><p>My work centers on perception–action loops: robots reason about what they do not know, choose physical interactions that reveal useful information, and update their decisions from experience. My PhD goal is to extend this idea across objects, environments, and other agents.</p></div>
+          <div className="section-heading reveal"><div><p className="section-kicker">RESEARCH INTERESTS / 01</p><h2>Questions I want to pursue.</h2></div></div>
           <div className="interest-list">
             {interests.map((item) => <article className="interest-card reveal" key={item.no}><span>{item.no}</span><h3>{item.title}</h3><p>{item.text}</p><i>↗</i></article>)}
           </div>
@@ -132,7 +152,7 @@ export default function Home() {
           <div><p className="section-kicker">TOOLBOX</p><div className="chips"><span>Python</span><span>C / C++</span><span>PyTorch</span><span>OpenGL</span><span>MATLAB</span><span>Robotics</span></div></div>
         </section>
 
-        <section className="contact reveal" id="contact"><p className="section-kicker">LET&apos;S CONNECT / 04</p><h2>Interested in building<br />robots that <em>keep learning?</em></h2><p>I&apos;m seeking PhD opportunities starting in 2027 in robotics, embodied intelligence, and robot learning.</p><a href="mailto:liyt2023@shanghaitech.edu.cn">liyt2023@shanghaitech.edu.cn <span>↗</span></a></section>
+        <section className="contact reveal" id="contact"><p className="section-kicker">LET&apos;S CONNECT / 04</p><h2>Interested in building<br />robots that <em>keep learning?</em></h2><p>I&apos;m seeking PhD opportunities starting in 2027 in robotics, embodied intelligence, and robot learning.</p><div className="contact-links"><a href="mailto:liyt2023@shanghaitech.edu.cn">liyt2023@shanghaitech.edu.cn <span>↗</span></a><a href="mailto:yuetongli2004@gmail.com">yuetongli2004@gmail.com <span>↗</span></a><a href="tel:+8613963982972">+86 139 6398 2972 <span>↗</span></a></div></section>
       </main>
 
       <footer><span>Yuetong Li · 2026</span><span>Shanghai ↔ Anywhere</span><a href="#home">Back to top ↑</a></footer>
