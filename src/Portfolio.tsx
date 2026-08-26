@@ -13,6 +13,7 @@ type Honor = { year: string; title: string; certificate?: string };
 
 const honors: Honor[] = [
   { year: "2025", title: "Merit Student", certificate: "/certificates/merit-student-2025.jpg" },
+  { year: "2024", title: "Merit Student", certificate: "/certificates/merit-student-2024.jpg" },
   { year: "2025", title: "2nd Prize, National Electronics Design Contest · Shanghai", certificate: "/certificates/national-electronics-2025.jpg" },
   { year: "2025", title: "1st Prize, ShanghaiTech Electronics Design Contest", certificate: "/certificates/shanghaitech-electronics-2025.jpg" },
 ];
@@ -73,15 +74,6 @@ export default function Home() {
             <p className="eyebrow"><span className="status-dot" /> OPEN TO PHD OPPORTUNITIES · 2027</p>
             <h1>I build robots that<br /><em>learn by interacting.</em></h1>
             <p className="hero-intro">I&apos;m <strong>Yuetong Li</strong>, a Computer Science undergraduate at ShanghaiTech University exploring active perception, dexterous manipulation, and embodied decision-making.</p>
-            <div className="hero-credentials credentials reveal">
-              <div><p className="section-kicker">EDUCATION</p><h3>ShanghaiTech University</h3><p>B.Eng. in Computer Science &amp; Technology<br />2023 — 2027 (expected)</p></div>
-              <div><p className="section-kicker">SELECTED HONORS</p><ul><li><b>2025</b> Merit Student</li><li><b>2024</b> Merit Student</li><li><b>2025</b> 2nd Prize, National Electronics Design Contest · Shanghai</li><li><b>2025</b> 1st Prize, ShanghaiTech Electronics Design Contest</li></ul></div>
-              <div><p className="section-kicker">TOOLBOX</p><div className="chips"><span>Python</span><span>C / C++</span><span>PyTorch</span><span>OpenGL</span><span>MATLAB</span><span>Robotics</span></div></div>
-            </div>
-            <div className="hero-actions">
-              <a className="primary-action" href="#research">Explore my research <span>↘</span></a>
-              <a className="text-action" href="/Yuetong_Li_CV.pdf" target="_blank">View CV <span>↗</span></a>
-            </div>
           </div>
           <div className="hero-visual reveal">
             <div className="orbit orbit-one" /><div className="orbit orbit-two" />
@@ -99,7 +91,15 @@ export default function Home() {
             </div>
             <div className="float-card card-b"><small>CURRENTLY AT</small><b>RIM Lab · ShanghaiTech</b></div>
           </div>
-          <a className="scroll-cue" href="#research"><span /> SCROLL TO DISCOVER</a>
+          <div className="hero-credentials credentials reveal">
+            <div><p className="section-kicker">EDUCATION</p><h3>ShanghaiTech University</h3><p>B.Eng. in Computer Science &amp; Technology<br />2023 — 2027 (expected)</p></div>
+            <div><p className="section-kicker">SELECTED HONORS</p><ul>{honors.map((honor) => <li key={honor.title}><b>{honor.year}</b> {honor.title}{honor.certificate && <a className="honor-link" href={honor.certificate} target="_blank" rel="noreferrer">Certificate ↗</a>}</li>)}</ul></div>
+            <div><p className="section-kicker">TOOLBOX</p><div className="chips"><span>Python</span><span>C / C++</span><span>MATLAB</span><span>RISC-V</span><span>PyTorch</span><span>OpenGL</span><span>MuJoCo</span><span>IsaacGym</span></div></div>
+          </div>
+          <div className="hero-actions">
+            <a className="primary-action" href="#research">Explore my research <span>↘</span></a>
+            <a className="text-action" href="/Yuetong_Li_CV.pdf" target="_blank">View CV <span>↗</span></a>
+          </div>
         </section>
 
         <section className="university-note reveal">
@@ -144,12 +144,6 @@ export default function Home() {
             <summary><span><small>PROJECT ARCHIVE</small>More projects from my CV</span><b>04 additional projects</b></summary>
             <div className="project-grid more-project-grid">{moreProjects.map((project) => <ProjectCard project={project} key={project.title} />)}</div>
           </details>
-        </section>
-
-        <section className="credentials reveal">
-          <div><p className="section-kicker">EDUCATION</p><h3>ShanghaiTech University</h3><p>B.Eng. in Computer Science & Technology<br />2023 — 2027 (expected)</p></div>
-          <div><p className="section-kicker">SELECTED HONORS</p><ul>{honors.map((honor) => <li key={honor.title}><b>{honor.year}</b> {honor.title}{honor.certificate && <a className="honor-link" href={honor.certificate} target="_blank" rel="noreferrer">Certificate ↗</a>}</li>)}</ul></div>
-          <div><p className="section-kicker">TOOLBOX</p><div className="chips"><span>Python</span><span>C / C++</span><span>PyTorch</span><span>OpenGL</span><span>MATLAB</span><span>Robotics</span></div></div>
         </section>
 
         <section className="contact reveal" id="contact"><p className="section-kicker">LET&apos;S CONNECT / 04</p><h2>Interested in building<br />robots that <em>keep learning?</em></h2><p>I&apos;m seeking PhD opportunities starting in 2027 in robotics, embodied intelligence, and robot learning.</p><div className="contact-links"><a href="mailto:liyt2023@shanghaitech.edu.cn">liyt2023@shanghaitech.edu.cn <span>↗</span></a><a href="mailto:yuetongli2004@gmail.com">yuetongli2004@gmail.com <span>↗</span></a><a href="tel:+8613963982972">+86 139 6398 2972 <span>↗</span></a></div></section>

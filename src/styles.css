@@ -199,7 +199,7 @@ nav a.active::after {
     grid-template-columns: 1.15fr .85fr;
     gap: 34px;
     position: relative;
-    align-items: center;
+    align-items: start;
 }
 
 .eyebrow,
@@ -275,7 +275,6 @@ nav a.active::after {
 
 .hero-visual {
     position: relative;
-    min-height: 490px;
     display: grid;
     place-items: center;
 }
@@ -289,7 +288,9 @@ nav a.active::after {
     backdrop-filter: blur(12px);
     padding: 14px;
     transform: rotate(2deg);
-    box-shadow: 0 20px 80px rgba(24, 19, 13, .14)
+    box-shadow: 0 20px 80px rgba(24, 19, 13, .14);
+    /* Pulls the photo down so its top aligns with the first line of the hero title. */
+    margin-top: 80px;
 }
 
 .avatar-frame img {
@@ -1197,8 +1198,8 @@ footer {
 
 .honor-link { margin-left: 10px; color: var(--accent); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; }
 .gallery-page main { min-height: calc(100vh - 150px); }
-.gallery-hero { max-width: 760px; padding: 150px 7vw 80px; }
-.gallery-hero h1 { margin: 18px 0 24px; font-size: clamp(54px, 8vw, 112px); line-height: .91; letter-spacing: -.07em; }
+.gallery-hero { padding: 150px 7vw 80px; }
+.gallery-hero h1 { margin: 18px 0 24px; font-family: var(--serif-display); font-weight: 600; font-size: clamp(38px, 4.6vw, 70px); line-height: .82; letter-spacing: -.055em; white-space: nowrap; text-shadow: 0 1px 0 rgba(255, 255, 255, .55); }
 .gallery-hero h1 em { color: var(--accent); font-style: normal; }
 .gallery-hero > p:last-child { max-width: 480px; color: #3f3b32; font-size: 18px; line-height: 1.55; }
 .gallery-content { padding: 0 7vw 100px; }
@@ -2067,35 +2068,15 @@ footer {
     .feature-copy { padding: 22px }
 }
 
-/* Compact credentials block moved into the hero introduction. */
+/* Full-width credentials block spanning the hero. */
 .hero-credentials {
-    margin: 38px 0 0;
-    max-width: 760px;
-    grid-template-columns: 1fr 1.35fr 1fr;
-    box-shadow: none;
+    grid-column: 1 / -1;
+    max-width: none;
+    margin: 40px 0 0;
 }
 
-.hero-credentials > div {
-    padding: 20px 22px;
-}
-
-.hero-credentials h3 {
-    margin: 14px 0 5px;
-}
-
-.hero-credentials p,
-.hero-credentials li {
-    font-size: 11px;
-    line-height: 1.55;
-}
-
-.hero-credentials ul {
-    margin: 0;
-    padding-top: 8px;
-}
-
-.hero-credentials .chips {
-    margin-top: 14px;
+.hero-actions {
+    grid-column: 1 / -1;
 }
 
 .university-note {
@@ -2183,6 +2164,10 @@ footer {
 @media(max-width:900px) {
     .hero-credentials {
         margin-top: 34px;
+    }
+
+    .avatar-frame {
+        margin-top: 0;
     }
 
     .university-note {
