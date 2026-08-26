@@ -9,6 +9,13 @@ const interests = [
 ];
 
 type Project = { year: string; tag: string; title: string; text: string; github?: string; report?: string; reportLabel?: string };
+type Honor = { year: string; title: string; certificate?: string };
+
+const honors: Honor[] = [
+  { year: "2025", title: "Merit Student", certificate: "/certificates/merit-student-2025.jpg" },
+  { year: "2025", title: "2nd Prize, National Electronics Design Contest · Shanghai", certificate: "/certificates/national-electronics-2025.jpg" },
+  { year: "2025", title: "1st Prize, ShanghaiTech Electronics Design Contest", certificate: "/certificates/shanghaitech-electronics-2025.jpg" },
+];
 
 const projects: Project[] = [
   { year: "2026", tag: "CS181 · PLANNING", title: "Multi-Agent Coordination in Overcooked", text: "Developed two complementary approaches to long-horizon coordination: Macro-Expectimax with Bayesian teammate-intent inference, and a neural Q-learning agent trained through parameter-shared self-play.", github: "https://github.com/lytClaudius/MultiAgentCollab_in_Overcooked", report: "/reports/overcooked-coordination-report.pdf" },
@@ -56,7 +63,7 @@ export default function Home() {
       <header className="nav-wrap">
         <a className="wordmark" href="#home" aria-label="Yuetong Li, home"><span>YL</span> Yuetong Li</a>
         <nav aria-label="Primary navigation">
-          {["interests", "research", "projects"].map((item) => <a key={item} className={activeSection === item ? "active" : ""} href={`#${item}`}>{item}</a>)}
+          {["interests", "research", "projects"].map((item) => <a key={item} className={activeSection === item ? "active" : ""} href={`#${item}`}>{item}</a>)}<a href="/gallery.html">gallery</a>
         </nav>
       </header>
 
@@ -121,7 +128,7 @@ export default function Home() {
 
         <section className="credentials reveal">
           <div><p className="section-kicker">EDUCATION</p><h3>ShanghaiTech University</h3><p>B.Eng. in Computer Science & Technology<br />2023 — 2027 (expected)</p></div>
-          <div><p className="section-kicker">SELECTED HONORS</p><ul><li><b>2025</b> Merit Student</li><li><b>2025</b> 2nd Prize, National Electronics Design Contest · Shanghai</li><li><b>2025</b> 1st Prize, ShanghaiTech Electronics Design Contest</li></ul></div>
+          <div><p className="section-kicker">SELECTED HONORS</p><ul>{honors.map((honor) => <li key={honor.title}><b>{honor.year}</b> {honor.title}{honor.certificate && <a className="honor-link" href={honor.certificate} target="_blank" rel="noreferrer">Certificate ↗</a>}</li>)}</ul></div>
           <div><p className="section-kicker">TOOLBOX</p><div className="chips"><span>Python</span><span>C / C++</span><span>PyTorch</span><span>OpenGL</span><span>MATLAB</span><span>Robotics</span></div></div>
         </section>
 
